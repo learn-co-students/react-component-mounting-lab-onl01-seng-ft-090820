@@ -11,6 +11,10 @@ class App extends Component {
 
 
   //Your code here:
+  // When App is rendered call handleAddTimer to add a clock
+  componentDidMount() {
+    this.handleAddTimer() 
+  }
 
 
 

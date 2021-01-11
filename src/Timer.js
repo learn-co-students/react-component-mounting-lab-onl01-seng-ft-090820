@@ -7,7 +7,15 @@ class Timer extends Component {
   };
 
   // add your code here
+  // when clock is mounted start clockTick with interval 1000msec
+  componentDidMount() {
+    this.interval = setInterval(this.clockTick, 1000)
+  }
 
+  // when clock is closed (unmounted) clear interval
+  componentWillUnmount() {
+    clearInterval(this.interval)
+  }
   render() {
     const { time, color } = this.state;
     return (

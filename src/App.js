@@ -11,7 +11,9 @@ class App extends Component {
 
 
   //Your code here:
-
+componentDidMount() {
+  this.interval = setInterval(this.clockTick, 1000);
+}
 
 
 
